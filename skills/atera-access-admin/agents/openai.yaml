@@ -1,0 +1,6 @@
+interface:
+  display_name: "Atera Access Admin"
+  short_description: "Manage Atera technicians, roles, and access"
+  default_prompt: "Use $atera-access-admin to manage this Atera technician's access."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Atera Organization Lifecycle"
+  short_description: "Onboard and offboard Atera Customers or Sites"
+  default_prompt: "Use $atera-organization-lifecycle to complete this Atera Customer or Site lifecycle workflow."
+policy:
+  allow_implicit_invocation: true

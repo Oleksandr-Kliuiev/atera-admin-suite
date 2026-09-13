@@ -1,0 +1,12 @@
+.atera/
+operations-catalog.yaml
+operations-catalog.yml
+*.env
+*.key
+*.pem
+*.pfx
+*.p12
+*.token
+work/
+__pycache__/
+*.py[cod]

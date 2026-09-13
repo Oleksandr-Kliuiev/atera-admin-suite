@@ -1,0 +1,14 @@
+states:
+  - prepared
+  - assigned
+  - queued
+  - delivered_to_agent
+  - running
+  - atera_reported_result
+  - independently_verified
+
+invariants:
+  - "A queued action is not running."
+  - "Atera-reported completion is not proof of the intended endpoint outcome."
+  - "An uncertain action must be read before retry."
+  - "Offline queue duration and expiry must be reported."

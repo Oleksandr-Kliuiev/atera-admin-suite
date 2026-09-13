@@ -1,0 +1,6 @@
+interface:
+  display_name: "Atera PSA and Billing"
+  short_description: "Manage Atera contracts, work, and billing"
+  default_prompt: "Use $atera-psa-billing to prepare or review this Atera PSA billing workflow."
+policy:
+  allow_implicit_invocation: true

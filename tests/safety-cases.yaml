@@ -1,0 +1,19 @@
+cases:
+  - operation: save_unassigned_profile
+    expected_gate: reversible_configuration
+  - operation: assign_profile_broadly
+    expected_gate: critical_commit
+  - operation: run_script
+    expected_gate: critical_commit
+  - operation: deploy_software_or_patch
+    expected_gate: critical_commit
+  - operation: reboot_or_shutdown
+    expected_gate: critical_commit
+  - operation: initiate_remote_session
+    expected_gate: critical_commit_and_human_consent_when_required
+  - operation: delete_agent
+    expected_gate: irreversible_commit
+  - operation: reset_api_key
+    expected_gate: critical_commit
+  - operation: deactivate_admin_technician
+    expected_gate: critical_commit

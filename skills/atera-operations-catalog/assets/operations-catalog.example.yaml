@@ -1,0 +1,124 @@
+schema_version: 1
+
+account:
+  name: "Example Atera workspace"
+  mode: "msp"
+  timezone: "Europe/Oslo"
+  subscription: "Example plan"
+  sla_model: "detected_live"
+  verified_at: "2026-09-13"
+
+maintenance_windows:
+  workstation-weekend:
+    timezone_basis: "device_local"
+    schedule: "Saturday 22:00"
+    duration_minutes: 240
+  server-monthly:
+    timezone_basis: "account"
+    schedule: "Second Sunday 02:00"
+    duration_minutes: 180
+
+device_profiles:
+  standard-workstation:
+    description: "Managed Windows employee workstation"
+    os:
+      - "windows"
+    device_role: "workstation"
+    threshold_profile: "Workstation Monitoring"
+    configuration_policy: "Managed Windows Updates"
+    automation_profiles:
+      - "Monthly Workstation Patching"
+    software_bundle: "Standard Employee Apps"
+    maintenance_window: "workstation-weekend"
+    offline_queue: "7 days"
+    reboot_policy: "outside-active-hours"
+    verification:
+      - "agent-online-after-change"
+      - "patch-inventory-current"
+      - "software-baseline-present"
+  standard-server:
+    description: "Managed Windows server"
+    os:
+      - "windows"
+    device_role: "server"
+    threshold_profile: "Server Monitoring"
+    configuration_policy: "Server Update Policy"
+    automation_profiles:
+      - "Monthly Server Patching"
+    maintenance_window: "server-monthly"
+    offline_queue: "1 day"
+    reboot_policy: "maintenance-window-only"
+
+access_profiles:
+  level-one:
+    role: "Level 1 Support"
+    organization_scope: "assigned-only"
+    remote_access: true
+    run_scripts: false
+    manage_patches: false
+  endpoint-admin:
+    role: "Endpoint Administrator"
+    organization_scope: "assigned-only"
+    remote_access: true
+    run_scripts: true
+    manage_patches: true
+
+approved_scripts:
+  restart-print-spooler:
+    library_name: "Restart Print Spooler"
+    supported_os:
+      - "windows"
+    sha256: "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+    purpose: "Restart the print spooler service"
+    verification: "Spooler service is Running"
+    rollback: "Not required; service state is verified"
+
+organizations:
+  example-customer:
+    type: "customer"
+    id: 12345
+    display_name: "Example Customer AS"
+    default_device_profile: "standard-workstation"
+    folders:
+      workstations:
+        id: 2001
+        display_name: "Workstations"
+        device_profile: "standard-workstation"
+      servers:
+        id: 2002
+        display_name: "Servers"
+        device_profile: "standard-server"
+    service_desk:
+      sla: "Standard Business SLA"
+      business_hours: "Norway Business Hours"
+      technician_group: "Level 1"
+      support_address_alias: "customer-support"
+
+integrations:
+  reporting-export:
+    owner_alias: "integration-owner"
+    data_domains:
+      - "agents:read"
+      - "alerts:read"
+      - "tickets:read"
+    masked_key_fingerprint: "atera-...8f2c"
+    status: "active"
+
+safety:
+  protected_technicians:
+    - "owner@example.invalid"
+  protected_organizations:
+    - "example-customer"
+  protected_devices:
+    - device_guid: "00000000-0000-0000-0000-000000000001"
+      reason: "Example infrastructure controller"
+  protected_profiles:
+    - "Monthly Server Patching"
+  critical_actions:
+    - "bulk-script"
+    - "patch-run-now"
+    - "software-uninstall"
+    - "remote-session"
+    - "device-reboot-or-shutdown"
+    - "agent-delete"
+    - "api-key-reset"

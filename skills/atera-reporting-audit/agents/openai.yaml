@@ -1,0 +1,6 @@
+interface:
+  display_name: "Atera Reporting and Audit"
+  short_description: "Review Atera reports, inventory, and audit evidence"
+  default_prompt: "Use $atera-reporting-audit to investigate this Atera report or operational discrepancy."
+policy:
+  allow_implicit_invocation: true

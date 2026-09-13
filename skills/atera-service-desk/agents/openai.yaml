@@ -1,0 +1,6 @@
+interface:
+  display_name: "Atera Service Desk"
+  short_description: "Manage Atera tickets, SLAs, and automation"
+  default_prompt: "Use $atera-service-desk to handle or configure this Atera ticketing workflow."
+policy:
+  allow_implicit_invocation: true

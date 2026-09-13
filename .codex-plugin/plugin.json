@@ -1,0 +1,35 @@
+{
+  "name": "atera-admin-suite",
+  "version": "0.1.0",
+  "description": "Browser-based Atera administration skills for supervised production RMM, PSA, and service desk operations.",
+  "author": {
+    "name": "Atera Admin Suite Contributors"
+  },
+  "repository": "https://github.com/Oleksandr-Kliuiev/atera-admin-suite",
+  "keywords": [
+    "atera",
+    "rmm",
+    "psa",
+    "service-desk",
+    "patch-management",
+    "endpoint-management"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Atera Admin Suite",
+    "shortDescription": "Production Atera browser administration",
+    "longDescription": "A unified entrypoint and focused Codex skills for supervised Atera administration through an authenticated browser, including MSP and IT Department accounts, devices, monitoring, patching, software, scripts, remote support, service desk, PSA, reporting, and integrations.",
+    "developerName": "Atera Admin Suite Contributors",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use $atera-admin-suite for Atera administration.",
+      "Onboard a new managed device in Atera.",
+      "Review failed patches and queued processes."
+    ],
+    "brandColor": "#6C4CF1"
+  }
+}

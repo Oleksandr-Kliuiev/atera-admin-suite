@@ -1,0 +1,6 @@
+interface:
+  display_name: "Atera Device Lifecycle"
+  short_description: "Onboard, move, retire, or remove Atera devices"
+  default_prompt: "Use $atera-device-lifecycle to complete this Atera managed-device lifecycle task."
+policy:
+  allow_implicit_invocation: true

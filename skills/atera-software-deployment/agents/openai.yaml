@@ -1,0 +1,6 @@
+interface:
+  display_name: "Atera Software Deployment"
+  short_description: "Deploy and verify software through Atera"
+  default_prompt: "Use $atera-software-deployment to deploy or manage this software through Atera."
+policy:
+  allow_implicit_invocation: true

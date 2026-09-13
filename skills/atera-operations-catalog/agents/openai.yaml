@@ -1,0 +1,6 @@
+interface:
+  display_name: "Atera Operations Catalog"
+  short_description: "Build private Atera operational profiles"
+  default_prompt: "Use $atera-operations-catalog to create or validate a private Atera operations catalog."
+policy:
+  allow_implicit_invocation: true

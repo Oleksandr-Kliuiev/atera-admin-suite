@@ -1,0 +1,16 @@
+cases:
+  - account_mode: msp
+    organization_term: customer
+    person_term: contact
+  - account_mode: it_department
+    organization_term: site
+    person_term: user
+  - profile_type: threshold
+    behavior: single_effective
+    precedence: [agent, folder, organization, default]
+  - profile_type: configuration_policy
+    behavior: inherited_override
+    precedence: [agent, folder, organization]
+  - profile_type: automation
+    behavior: cumulative
+    required_check: overlapping_tasks

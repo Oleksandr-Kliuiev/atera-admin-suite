@@ -1,0 +1,6 @@
+interface:
+  display_name: "Atera Account Admin"
+  short_description: "Configure global Atera account settings"
+  default_prompt: "Use $atera-account-admin to review or configure this Atera account."
+policy:
+  allow_implicit_invocation: true

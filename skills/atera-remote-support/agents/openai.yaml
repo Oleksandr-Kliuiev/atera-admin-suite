@@ -1,0 +1,6 @@
+interface:
+  display_name: "Atera Remote Support"
+  short_description: "Perform supervised remote endpoint support"
+  default_prompt: "Use $atera-remote-support to diagnose and resolve this endpoint issue through Atera."
+policy:
+  allow_implicit_invocation: true

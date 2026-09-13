@@ -1,0 +1,6 @@
+interface:
+  display_name: "Atera Monitoring and Alerts"
+  short_description: "Manage Atera thresholds, alerts, and healing"
+  default_prompt: "Use $atera-monitoring-alerts to review or configure this Atera monitoring workflow."
+policy:
+  allow_implicit_invocation: true

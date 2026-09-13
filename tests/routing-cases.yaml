@@ -1,0 +1,14 @@
+cases:
+  - request: "Use $atera-admin-suite to onboard a new workstation"
+    expected_owner: atera-admin-suite
+    expected_route: atera-device-lifecycle
+  - request: "Invite an Atera technician and limit access to two customers"
+    expected_owner: atera-access-admin
+  - request: "Deploy the standard application bundle in Atera"
+    expected_owner: atera-software-deployment
+  - request: "Investigate failed Atera patch jobs"
+    expected_owner: atera-patch-policy-admin
+  - request: "Create ticket routing rules in Atera"
+    expected_owner: atera-service-desk
+  - request: "Export an Atera software inventory report"
+    expected_owner: atera-reporting-audit

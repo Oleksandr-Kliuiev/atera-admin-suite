@@ -1,0 +1,6 @@
+interface:
+  display_name: "Atera Script and Remediation"
+  short_description: "Review and run endpoint scripts through Atera"
+  default_prompt: "Use $atera-script-remediation to review and execute this Atera remediation script."
+policy:
+  allow_implicit_invocation: true

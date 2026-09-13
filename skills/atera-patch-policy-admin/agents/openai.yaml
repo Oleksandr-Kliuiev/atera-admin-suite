@@ -1,0 +1,6 @@
+interface:
+  display_name: "Atera Patch and Policy Admin"
+  short_description: "Manage Atera patching and configuration policy"
+  default_prompt: "Use $atera-patch-policy-admin to configure or run this Atera patching workflow."
+policy:
+  allow_implicit_invocation: true
