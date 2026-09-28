@@ -1,28 +1,16 @@
 ---
 name: atera-operations-catalog
-description: Discover, create, compare, validate, and maintain a private Atera operations catalog containing account mode, Customers or Sites, folders, device baselines, monitoring and automation profiles, maintenance windows, service desk defaults, technician access profiles, approved script fingerprints, integrations, and protected objects. Use to prepare reusable account-specific profiles; never treat the catalog as authorization.
+description: "Atera private operations catalog: discover, create, compare, and validate reusable account, organization, device, access, service, and integration profiles."
 ---
 
 # Atera Operations Catalog
 
-Build a private intended-state catalog from administrator input and read-only Atera discovery. The catalog accelerates other Atera skills but never replaces live verification, endpoint evidence, or task authorization.
+Use the existing authenticated **Chrome** session and read the [shared browser contract](../atera-organization-lifecycle/references/browser-operation-contract.md) once per working context.
 
-## Location and privacy
+Build intended-state profiles from administrator input and read-only discovery. A catalog never grants authorization or proves live assignment. Use the requested path or `.atera/operations-catalog.yaml`; create it only when requested.
 
-Use a user-provided path or `.atera/operations-catalog.yaml` in the current working directory. Create the parent directory only when the user asks to create a catalog.
+Read [catalog schema](references/catalog-schema.md) and use the [synthetic template](assets/operations-catalog.example.yaml) only when creating or materially changing a catalog. For comparison, load only relevant entries. Keep secrets, full customer/user/device exports, and unnecessary personal data out; store stable IDs, readable names, aliases, and masked fingerprints.
 
-Never store passwords, API keys, installer tokens, session cookies, MFA/SSO secrets, recovery codes, remote-access credentials, private keys, scripts containing secrets, complete customer/user/device exports, or unnecessary personal data. Use stable IDs, profile names, masked fingerprints, and aliases.
+Discover relevant account/mode/subscription/timezone/SLA generation, hierarchy, baselines, profiles and inheritance, maintenance windows, access, service defaults, integrations, and protected assets. Compute effective assignment and record inheritance/override intent; do not turn one device's accidental state into an approved profile. Separate `observed` from approved `intended` values; resolve differences only when they change future operations. Preserve authored comments and unknown keys when practical. Run `scripts/validate_catalog.py` when Python/PyYAML are available.
 
-Read [references/catalog-schema.md](references/catalog-schema.md) before creating or materially changing a catalog. Use [assets/operations-catalog.example.yaml](assets/operations-catalog.example.yaml) as the structural template.
-
-## Discovery workflow
-
-1. Confirm signed-in technician, account name, subscription, account mode, timezone, and live SLA generation.
-2. Inventory Customer/Site hierarchy, folders, device categories, threshold profiles, Configuration Policies, IT Automation profiles, software bundles, maintenance windows, technician roles, service-desk defaults, integrations, and protected assets using read-only views.
-3. Compute effective assignment and record inheritance/override intent rather than copying one device's accidental state.
-4. Distinguish `observed` from administrator-approved `intended` values. Ask for a decision only when the difference changes future operations.
-5. Store stable Customer/Site, folder, Agent, DeviceGUID, role, policy, and profile IDs when available, retaining readable names.
-6. Add protected organizations, devices, technicians, scripts, remote actions, and workflows that require exact authorization.
-7. Save privately and run `scripts/validate_catalog.py` when Python and PyYAML are available.
-
-Preserve administrator-authored comments and unknown forward-compatible keys when practical. Finish with profiles added/changed, unresolved differences, unverified IDs, privacy exclusions, and validation results. Do not mutate Atera during catalog discovery unless separately requested.
+Report profiles changed, unresolved differences, unverified IDs, privacy exclusions, and validation. Discovery does not authorize Atera mutations.

@@ -1,7 +1,7 @@
 {
   "name": "atera-admin-suite",
-  "version": "0.1.0",
-  "description": "Browser-based Atera administration skills for supervised production RMM, PSA, and service desk operations.",
+  "version": "0.1.1",
+  "description": "Atera administration in authenticated Chrome for natural-language and voice requests, supervised RMM, PSA, service desk, and authorized report delivery.",
   "author": {
     "name": "Atera Admin Suite Contributors"
   },
@@ -17,8 +17,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Atera Admin Suite",
-    "shortDescription": "Production Atera browser administration",
-    "longDescription": "A unified entrypoint and focused Codex skills for supervised Atera administration through an authenticated browser, including MSP and IT Department accounts, devices, monitoring, patching, software, scripts, remote support, service desk, PSA, reporting, and integrations.",
+    "shortDescription": "Atera administration in Chrome",
+    "longDescription": "Natural-language and voice routing to focused Codex skills through an existing authenticated Chrome session. Supports MSP and IT Department accounts, devices, monitoring, patching, software, scripts, remote support, service desk, PSA, reporting, authorized one-time report delivery, and integrations. Loads one owning specialist, the shared browser contract once, and only needed references.",
     "developerName": "Atera Admin Suite Contributors",
     "category": "Productivity",
     "capabilities": [
@@ -26,7 +26,7 @@
       "Write"
     ],
     "defaultPrompt": [
-      "Use $atera-admin-suite for Atera administration.",
+      "Help me administer Atera in the existing Chrome session.",
       "Onboard a new managed device in Atera.",
       "Review failed patches and queued processes."
     ],

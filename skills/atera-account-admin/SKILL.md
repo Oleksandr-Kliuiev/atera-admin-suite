@@ -1,16 +1,14 @@
 ---
 name: atera-account-admin
-description: Administer global Atera account configuration through an authenticated browser, including account identity, timezone, language, subscription and add-ons, agent defaults, retired-device settings, support and alert defaults, and platform-wide preferences. Use for account-level settings, not endpoint execution or technician-role administration.
+description: "Atera account settings: identity, timezone, subscription/add-ons, agent and support defaults, retired devices, and platform-wide preferences."
 ---
 
 # Atera Account Admin
 
-Verify the signed-in account, subscription, and whether the UI is in MSP or IT Department mode. Inspect dependencies and downstream scope before changing a global setting.
+Use the existing authenticated **Chrome** session and read the [shared browser contract](../atera-organization-lifecycle/references/browser-operation-contract.md) once per working context.
 
-Read [references/account-settings.md](references/account-settings.md) for navigation, scheduling dependencies, paid features, global defaults, and verification.
+Read [account settings](references/account-settings.md). Verify account, mode, subscription, and relevant dependencies; use only relevant catalog entries as intended state.
 
-Use `.atera/operations-catalog.yaml` when available for intended account mode, timezone, and defaults. Verify them live. Do not silently activate paid add-ons, change subscription quantities, alter timezone used by automation schedules, enable agent uninstall prevention, modify retired-device behavior, or apply a default to all existing organizations.
+Do not silently activate paid add-ons, change quantities or scheduling timezone, enable uninstall prevention, change retired-device behavior, or apply defaults to existing organizations. Before global/paid changes, summarize the value delta, affected organizations/devices, billing/scheduling consequences, effective time, and rollback. Reopen to verify persistence and propagation.
 
-For global or paid changes, summarize before/after value, affected organizations and devices, billing or scheduling consequence, effective time, and rollback immediately before saving. Reopen the setting and independently verify persistence.
-
-Finish with account mode, exact setting, old/new value, scope, paid effect, schedule impact, propagation, and required human action.
+Report the exact setting, old/new value, scope, paid and schedule effects, propagation evidence, and human steps.

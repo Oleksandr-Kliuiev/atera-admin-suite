@@ -1,16 +1,17 @@
 ---
 name: atera-reporting-audit
-description: Investigate Atera operational reports and audit evidence through an authenticated browser, including device and software inventory, patch and automation feedback, Recent Processes, alerts, availability, health, SLA, ticketing, technician, billing, and Audit Log views. Use for read-only reviews, evidence collection, exports, and discrepancy analysis; do not mutate endpoints while gathering evidence.
+description: "Atera reports and audit: device/OS/software inventory, operational evidence, Recent Processes, Audit Log, export, and authorized email delivery. Read-only endpoints."
 ---
 
 # Atera Reporting and Audit
 
-Keep the investigation read-only unless the user separately requests remediation. Determine account mode and verify account, Customer/Site scope, folders, devices, report, timezone, date range, online/offline basis, and status filters.
+Use the existing authenticated **Chrome** session and read the [shared browser contract](../atera-organization-lifecycle/references/browser-operation-contract.md) once per working context.
 
-Read [references/reporting-audit.md](references/reporting-audit.md) for report scoping, complete-list handling, process status, drilldown, audit attribution, exports, privacy, and evidence quality.
+Choose only the needed route; do not load every recipe:
+- Device/OS or installed-program inventory: read [inventory scope](references/inventory-email.md#common-scope), then [Windows 10](references/windows-inventory.md) or [installed programs](references/software-inventory.md) when applicable.
+- Other reports, Recent Processes, Audit Log, or discrepancies: read the relevant sections of [reporting evidence](references/reporting-audit.md).
+- Sending any report: additionally read [delivery](references/report-delivery.md); inventory/audit recipes need not be reread. Prepare while resolving a missing recipient.
 
-Prefer stable IDs and report parameters over screenshots alone. Distinguish Atera configuration, assignment, queued work, process result, device inventory, and independently observed endpoint state. Recent Processes does not necessarily cover every scheduled Patch and IT Automation result; use the owning feedback report when required.
+Keep endpoint evidence gathering read-only. Inventory uninstall controls, scripts, endpoint refreshes, patches, and new recurring schedules are outside a one-time report request. Minimize exports and keep them private, outside public repositories and operations catalogs.
 
-Minimize customer, user, device, ticket, and billing data. Export only necessary fields to an approved private location; never place operational exports in the public repository or operations catalog.
-
-Finish with account mode, exact report/view, filters and timezone, as-of time, result counts and totals, stable sampled/drilled IDs, discrepancies, automation versus technician attribution, export location when requested, coverage limitations, and recommended next checks.
+Report scope, unique device count or evidence IDs, generated/exported/sent state, recipient when sent, and material freshness/completeness limits. Claim only evidenced delivery and coverage.

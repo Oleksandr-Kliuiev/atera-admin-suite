@@ -1,16 +1,14 @@
 ---
 name: atera-software-deployment
-description: Deploy and manage endpoint software through Atera's authenticated browser, including OS-specific software bundles, WinGet, Chocolatey, Homebrew, private repositories, App Center applications, manual or automated installation, updates, uninstall, offline queues, and deployment verification. Use for software-focused requests, not OS patching or arbitrary scripts.
+description: "Atera software deployment: bundles, WinGet/Chocolatey/Homebrew, private packages, App Center, install/update/uninstall, queues, and verification. Excludes inventory lists."
 ---
 
 # Atera Software Deployment
 
-Resolve account mode, Customer/Site, folder, exact devices, OS/architecture, online state, package source, package identity, version intent, prerequisites, and existing installation. Search software inventory and queued/recent processes before deploying.
+Use the existing authenticated **Chrome** session and read the [shared browser contract](../atera-organization-lifecycle/references/browser-operation-contract.md) once per working context.
 
-Read [references/software-deployment.md](references/software-deployment.md) for bundles, package sources, prerequisites, version semantics, scope, offline queues, critical commits, and verification.
+For lists of devices with installed software, use [reporting](../atera-reporting-audit/SKILL.md). For deployment, read [software operations](references/software-deployment.md) and inspect existing inventory plus queued/recent processes.
 
-Software bundles are OS-specific. Manual bundle installation can use versions captured when software was added, while an automation profile can install current available versions; verify the intended behavior. WinGet may require App Installer and Visual C++ prerequisites.
+Bundles are OS-specific. Manual installs may use captured versions; automation may use current versions. Verify that choice and WinGet App Installer/Visual C++ prerequisites. Unassigned bundle edits are reversible; installation, update, uninstall, new-agent assignment, and paid/security App Center enablement are critical commits. Honor authorized production scope and rollout strategy; do not invent a pilot.
 
-Creating or editing an unassigned bundle is reversible. Installing, updating, uninstalling, assigning to new agents, or enabling paid/security App Center software is a critical commit. Validate exact production scope; do not impose a pilot unless requested or cataloged.
-
-Finish with package/bundle and source, intended version, target count by OS and online state, prerequisites, assigned/queued/running/result states, independently verified inventory/version/service outcome, failures, skipped devices, paid effect, and rollback.
+Report package/bundle IDs, source/version, targets by OS/online state, prerequisites, queue/results, independently verified inventory/service outcome, failures, skips, paid effects, and rollback.

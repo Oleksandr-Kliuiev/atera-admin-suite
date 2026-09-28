@@ -14,7 +14,7 @@ Resolve every target by stable ID and classify OS, online/offline state, server/
 
 ## Critical checkpoint
 
-Present script name/hash, purpose, material changes, exact targets, execution identity, parameters with secrets redacted, queue duration, timeout, maintenance window, user/reboot impact, success predicate, and rollback. Obtain confirmation unless this exact execution was separately confirmed.
+Present script name/hash, purpose, material changes, exact targets, execution identity, parameters with secrets redacted, queue duration, timeout, maintenance window, user/reboot impact, success predicate, and rollback. Reuse exact authorization already given; obtain only missing scope or authorization.
 
 ## Verify
 

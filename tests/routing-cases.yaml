@@ -1,7 +1,10 @@
 cases:
   - request: "Use $atera-admin-suite to onboard a new workstation"
-    expected_owner: atera-admin-suite
-    expected_route: atera-device-lifecycle
+    expected_entrypoint: atera-admin-suite
+    expected_owner: atera-device-lifecycle
+  - request: "Onboard a new managed workstation in Atera"
+    expected_owner: atera-device-lifecycle
+    expected_requires_skill_name: false
   - request: "Invite an Atera technician and limit access to two customers"
     expected_owner: atera-access-admin
   - request: "Deploy the standard application bundle in Atera"
@@ -12,3 +15,14 @@ cases:
     expected_owner: atera-service-desk
   - request: "Export an Atera software inventory report"
     expected_owner: atera-reporting-audit
+  - request: "In Atera, email the selected customer's Windows 10 device list to admin@example.com"
+    input_mode: voice
+    expected_owner: atera-reporting-audit
+    expected_requires_skill_name: false
+    expected_endpoint_access: read_only
+    expected_delivery: one_authorized_send
+    expected_contract_loads_per_context: 1
+    expected_references:
+      - inventory-email.md#common-scope
+      - windows-inventory.md
+      - report-delivery.md

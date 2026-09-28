@@ -28,7 +28,7 @@ Immediately before deletion, present stable IDs, last seen, online state, depend
 
 ## Complete-list handling
 
-Clear saved views and Customer/Site/folder/status filters. Search exact stable IDs first, then secondary identity. Traverse all pages or virtual rows while tracking AgentID/DeviceGUID. Do not infer absence from the current folder or online-only view.
+Inspect saved views and hierarchy/status filters; preserve requested scope and remove conflicting restrictions. For duplicate detection or absence claims, include relevant active, offline, and retired records. Search exact stable IDs first, then secondary identity. Traverse all pages or virtual rows while tracking AgentID/DeviceGUID. Do not infer absence from the current folder or online-only view.
 
 ## Official references
 

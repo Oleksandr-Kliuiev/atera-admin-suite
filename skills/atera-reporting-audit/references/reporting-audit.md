@@ -2,7 +2,7 @@
 
 ## Scope the evidence
 
-Record account name/mode, Customer/Site and folder scope, report name, report generation, timezone, period/as-of time, status filters, device type/OS, inclusion of offline/retired assets, and saved-view filters. Reopen settings after generation to confirm them.
+Record account name/mode, Customer/Site and folder scope, report name, report generation, timezone, period/as-of time, status filters, device type/OS, inclusion of offline/retired assets, and saved-view filters. Verify the generated report's displayed parameters; reopen its settings only when the output does not expose the necessary scope.
 
 ## Operational evidence
 
@@ -19,7 +19,9 @@ Record account name/mode, Customer/Site and folder scope, report name, report ge
 
 ## Complete lists and exports
 
-Clear saved views and filters, use exact stable IDs, and traverse all pages or virtual rows while tracking boundaries and unique IDs. Verify exported row count, columns, date range, totals, and file name. State clearly when evidence is sampled rather than exhaustive.
+Inspect saved views and filters, preserve the requested Customer/Site and period, and remove only conflicting restrictions. Prefer a native export with a reconciled scoped total. If traversal is necessary, cover all pages or virtual rows while tracking boundaries and unique IDs. Verify exported row count, columns, date range, totals, and file name. State clearly when evidence is sampled rather than exhaustive.
+
+For a requested email, read only the [report delivery](report-delivery.md). A routine export does not authorize a recurring delivery schedule.
 
 ## Evidence quality
 

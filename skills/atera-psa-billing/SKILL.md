@@ -1,16 +1,14 @@
 ---
 name: atera-psa-billing
-description: Administer Atera PSA and billing through an authenticated browser, including customer contracts, contract types, rates, work logs, ticket products and expenses, block balances, service items, billing batches, invoices, tax settings, and billing reports. Use for commercial service administration, not technical remediation or external accounting-system posting.
+description: "Atera PSA and billing: contracts, rates, work logs, products/expenses, block balances, service items, billing batches, invoices, taxes, and commercial reports."
 ---
 
 # Atera PSA and Billing
 
-Resolve MSP or IT Department mode and verify whether the requested PSA feature exists in the subscription. In MSP billing work, resolve Customer, contract, ticket, work log, rate, product/expense, billing period, currency, tax setting, and invoice by stable identifiers.
+Use the existing authenticated **Chrome** session and read the [shared browser contract](../atera-organization-lifecycle/references/browser-operation-contract.md) once per working context.
 
-Read [references/psa-billing.md](references/psa-billing.md) for contract setup, work records, billing preparation, duplicate control, finalization, export, pagination, and verification.
+Read the relevant sections of [PSA and billing operations](references/psa-billing.md). Verify mode/subscription availability and stable Customer, contract, ticket, work-log, and invoice IDs.
 
-Separate draft/preparation, approval, invoice generation, external delivery, and accounting-system export. Do not infer contract terms, billable classification, rates, taxes, dates, or write-offs. A ticket status is not billing evidence by itself.
+Keep draft, approval, invoice generation, delivery, and accounting export states separate. Never infer terms, billability, rates, taxes, dates, or write-offs from ticket status. Paid contract activation, billed-record changes, invoice finalization, customer delivery, and accounting export/posting are critical commercial commits.
 
-Creating or editing draft contract/billing data may proceed when authorized. Activating a paid contract, modifying already billed records, generating/finalizing invoices, sending customer documents, or exporting/posting to another accounting system is a critical commercial commit.
-
-Finish with Customer and contract IDs, billing period, included/excluded work, aggregate hours/products/expenses/tax/total, draft/final/sent/exported state, duplicate checks, exceptions, and accounting or human follow-up.
+Report IDs, period, included/excluded work, hours/products/expenses/tax/total, draft/final/sent/exported state, duplicate checks, exceptions, and accounting/human follow-up.

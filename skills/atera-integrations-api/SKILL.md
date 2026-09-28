@@ -1,16 +1,16 @@
 ---
 name: atera-integrations-api
-description: Administer Atera API access and integrations, including API-key handling and reset, REST inventory and writes, pagination, imports and exports, accounting or messaging integrations, webhooks, mapping validation, troubleshooting, and idempotent retries. Use for integration-focused requests; never expose or persist an Atera API key.
+description: "Atera integrations and API: secure key setup/reset, scoped reads/writes, imports/exports, mapping, webhooks, pagination, sync troubleshooting, and retries."
 ---
 
 # Atera Integrations and API
 
-Verify account name and mode, integration, data domains, requested operation, stable target IDs, and current activation. Browser remains the default for supervised UI workflows; use API only when the user requests it or configured integration access materially improves the authorized task.
+Use the existing authenticated **Chrome** session and read the [shared browser contract](../atera-organization-lifecycle/references/browser-operation-contract.md) once per working context.
 
-Read [references/integrations-api.md](references/integrations-api.md) for key handling, reset impact, pagination, read/write boundaries, imports, webhooks, duplicate prevention, and verification.
+Read the relevant sections of [integration and API operations](references/integrations-api.md). Verify account/mode, integration, activation, data domains, and stable IDs. Use browser workflows by default; use API when requested or configured access materially improves the authorized task.
 
-The Atera REST API uses a sensitive account API key that can expose contacts and devices. Never reveal it in the browser, prompt, commentary, tool output, shell history, source code, catalog, or report. Use an approved secret store and masked fingerprint only. Reset invalidates consumers of the old key and is a critical commit.
+Before bulk operations, validate mappings, pagination, rate-limit/error handling, idempotency, rollback, and data minimization.
 
-API writes, destructive imports, scope expansion, integration activation, and webhook changes require exact authorization. Before bulk operations validate account mode, Customer/Site mapping, identifiers, field mapping, pagination, rate/error handling, idempotency, rollback, and data minimization.
+Never expose or persist an API key in model-visible output, prompts, history, source, catalogs, or reports. Use an approved secret store and masked fingerprint. Key reset invalidates old consumers and is a critical commit. Writes, destructive imports, activation, broader access, and webhook changes require exact authorization.
 
-Finish with integration, account mode, authorized data domains, masked credential identifier, records read/created/updated/skipped/rejected, pagination completeness, duplicate handling, webhook/sync state, failures, and rotation or human steps—never the key value.
+Report integration, domains, masked credential identifier, stable record IDs and read/created/updated/skipped/rejected counts, pagination, duplicates, sync/webhook state, failures, and rotation/human steps.

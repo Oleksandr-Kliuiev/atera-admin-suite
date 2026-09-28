@@ -50,11 +50,20 @@ def main() -> int:
             )
         else:
             descriptions[description] = skill_dir.name
+        if description and len(description) > 220:
+            errors.append(
+                f"description exceeds 220 characters: {entry.relative_to(ROOT)}"
+            )
 
         if interface.is_file():
             interface_text = interface.read_text(encoding="utf-8")
             if f"${skill_dir.name}" not in interface_text:
                 errors.append(f"default prompt does not name ${skill_dir.name}")
+            if re.search(
+                r"(?im)^\s*allow_implicit_invocation:\s*(?:false|no|off)\s*(?:#.*)?$",
+                interface_text,
+            ):
+                errors.append(f"implicit invocation disabled: {interface.relative_to(ROOT)}")
 
     for markdown in ROOT.rglob("*.md"):
         if ".git" in markdown.parts:

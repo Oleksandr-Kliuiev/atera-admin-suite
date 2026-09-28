@@ -24,6 +24,6 @@ Before final generation, sending, or export, present contract, period, item coun
 
 ## Complete-list handling
 
-Clear Customer, contract, technician, status, and date filters. Traverse all pages and nested details; track stable ticket, work-log, contract, and invoice IDs. A summary total without included-record evidence is insufficient.
+Inspect Customer, contract, technician, status, and date filters; preserve the requested scope and remove only conflicting restrictions. Traverse all pages and nested details; track stable ticket, work-log, contract, and invoice IDs. A summary total without included-record evidence is insufficient.
 
 Official reference: [Create a customer, contract, and contact](https://support.atera.com/hc/en-us/articles/217106008-Create-a-customer-contract-and-contact).

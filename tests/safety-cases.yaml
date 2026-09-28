@@ -17,3 +17,19 @@ cases:
     expected_gate: critical_commit
   - operation: deactivate_admin_technician
     expected_gate: critical_commit
+  - operation: requested_one_time_report_send
+    expected_gate: reuse_exact_user_authorization
+    required_checks: [account, resolved_recipients, scope, dates, format, attachment]
+    expected_route: native_one_time_send_when_supported_else_authorized_chrome_webmail
+    expected_verification: observed_send_record_or_native_history
+  - operation: report_send_missing_recipient
+    expected_gate: resolve_recipient_while_preparing_report
+  - operation: uncertain_report_send
+    expected_gate: inspect_sent_or_history_before_any_retry
+    retry_requires: evidence_of_no_submission
+  - operation: add_recurrence_or_recipients_to_one_time_report
+    expected_gate: separate_exact_authorization
+  - operation: inventory_endpoint_remediation
+    expected_gate: separate_exact_authorization
+  - operation: report_rehearsal
+    expected_gate: externally_read_only

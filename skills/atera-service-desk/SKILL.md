@@ -1,16 +1,14 @@
 ---
 name: atera-service-desk
-description: Administer Atera Service Desk through an authenticated browser, including ticket creation and triage, assignment, technician groups, statuses, priorities, comments and replies, requester or contact handling, queues, forms, email templates, business hours, SLA policies, and ticket automation rules. Use for ticketing workflows, not endpoint remediation itself or contract billing.
+description: "Atera service desk: tickets, queues, assignment/groups, requester replies and internal notes, statuses, forms/templates, business hours, SLA, and automation rules."
 ---
 
 # Atera Service Desk
 
-Determine MSP versus IT Department mode, then resolve ticket by ticket ID and Customer/Contact or Site/User. Inspect full activity, related alert/device, current assignment, group privacy, status, priority, SLA basis, and requester-visible communication before mutation.
+Use the existing authenticated **Chrome** session and read the [shared browser contract](../atera-organization-lifecycle/references/browser-operation-contract.md) once per working context.
 
-Read [references/service-desk.md](references/service-desk.md) for ticket state, SLA generations, rule ordering, communications, bulk actions, pagination, and verification.
+Read the relevant sections of [service desk operations](references/service-desk.md). Resolve ticket ID and mode-specific requester/organization; inspect activity, related device/alert, privacy, assignment, and SLA basis.
 
-Distinguish internal note from requester-visible reply. Never send a message, survey, or external notification without reviewing recipients and rendered content. Resolve or close only when the issue outcome and closure criteria are met; status changes can trigger automation, email, SLA recalculation, surveys, and child tickets.
+Distinguish internal notes from public replies; review recipients and rendered content before authorized messages, surveys, or notifications. Resolve/close only when outcome and closure criteria are met. Status changes may trigger email, surveys, child tickets, SLA recalculation, and rules. Model rule order, first-match/Always-run semantics, loops, and future scope before enabling. Deleting tickets, groups, rules, templates, or history is destructive.
 
-Ticket automation rules affect future events and action order matters. Before enabling or changing a rule, model trigger, conditions, action order, scope, first-match/Always-run behavior, recipients, loops, and unintended all-ticket matches. Deleting tickets, groups, rules, templates, or history is destructive.
-
-Finish with ticket IDs, assignment, status/priority/SLA before and after, public/internal communications, automation triggered, related alert/device outcome, breached or paused time, unresolved work, and required human follow-up.
+Report ticket IDs, assignment, status/priority/SLA deltas, communications, triggered automation, endpoint/alert outcome, breached/paused time, and remaining work.

@@ -27,7 +27,7 @@ Rule changes generally affect future events, not historical tickets. Do not clai
 
 ## Queues and bulk actions
 
-Clear saved-view filters and inspect all pages. Select tickets by stable ID, not row position. Before bulk assignment/status/priority/merge/delete, reconcile count, scope, SLA effects, private-group access, notifications, and automation triggers.
+Inspect saved-view filters, preserve requested scope, remove only conflicting restrictions, and inspect all pages. Select tickets by stable ID, not row position. Before bulk assignment/status/priority/merge/delete, reconcile count, scope, SLA effects, private-group access, notifications, and automation triggers.
 
 ## Official references
 
