@@ -25,9 +25,18 @@ Give the task in ordinary language or voice, for example:
 ```text
 Onboard a new managed workstation in Atera.
 List Windows 10 devices for the selected customer in Atera.
+Check whether any customers have 7-Zip installed; email any matches to admin@example.com.
 ```
 
 You can also name `$atera-admin-suite` explicitly. The suite selects one owning specialist; that specialist reads the shared Chrome contract once per working context and only the needed reference sections. Lifecycle owners coordinate related work and add a specialist only when its detailed procedure or critical action is needed.
+
+Inventory requests route by what is being counted:
+
+- Windows families use **Reports → Classic Reports / Operational reports → Monitoring → Microsoft licensing**, with the exact available OS selector for the requested family and all matching editions.
+- Installed applications use **Reports → Classic Reports / Operational reports → Monitoring → Software inventory**, with all matching versions unless a version is requested. Device lists are deduplicated across matching versions.
+- Other operating systems use **Reports → Analytical reports → Presets → OS Overview**, with complete device drilldown and customer evidence. Windows 11 readiness results do not establish complete OS inventory.
+
+Each new request clears residual customer, software, version, and OS filters before applying the requested scope. A named customer limits the report to that customer; a general “anyone” / Norwegian “nokon” request without a customer uses all customers, including after a previous named-customer report. Results are Atera-reported inventory; report generation time does not establish endpoint freshness. A verified complete zero requires a successfully generated result covering the requested scope. Empty, loading, partial, or stale results do not establish zero.
 
 ## Operations catalog
 
@@ -40,6 +49,8 @@ Without a catalog, the selected skill discovers current state in the authenticat
 The administrator signs in to Atera in Chrome and gives Codex the task. Skills reuse that tab and profile, execute routine authorized work, and verify persisted state. They distinguish configuration saved in Atera from assignment, offline queueing, device execution, Atera-reported completion, and the actual endpoint outcome. Critical or disruptive changes retain their specialist checkpoint and ask only for missing exact authorization; MFA, SSO reauthentication, and required remote-user consent remain human steps.
 
 A request to email a report authorizes one send to resolved recipients within the requested scope. Skills verify the account, recipient, report, dates, format, and attachment, use a native one-time send when the current report supports it, or export through an existing authorized Chrome webmail session when supported. They report the observed generated, exported, or sent state; submission accepted is distinct from recipient delivery. An uncertain send is not retried without evidence that no submission occurred. Extra recipients, recurring schedules, paid features, and endpoint changes require their own authorization.
+
+“If any” delivery requires qualifying matches; a verified complete zero means no email. A positive result authorizes one send to the resolved address after the scope and content checks. Conflicting displayed and `mailto:` addresses require recipient clarification while the report is prepared. Inventory can be sent as a concise device/OS or device/application list in the email body unless a file was requested; unrequested Windows and Office license keys are excluded. Inventory work never authorizes endpoint changes.
 
 ## Validation
 

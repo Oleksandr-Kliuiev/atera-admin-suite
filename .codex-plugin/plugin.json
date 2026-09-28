@@ -1,6 +1,6 @@
 {
   "name": "atera-admin-suite",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Atera administration in authenticated Chrome for natural-language and voice requests, supervised RMM, PSA, service desk, and authorized report delivery.",
   "author": {
     "name": "Atera Admin Suite Contributors"
@@ -18,7 +18,7 @@
   "interface": {
     "displayName": "Atera Admin Suite",
     "shortDescription": "Atera administration in Chrome",
-    "longDescription": "Natural-language and voice routing to focused Codex skills through an existing authenticated Chrome session. Supports MSP and IT Department accounts, devices, monitoring, patching, software, scripts, remote support, service desk, PSA, reporting, authorized one-time report delivery, and integrations. Loads one owning specialist, the shared browser contract once, and only needed references.",
+    "longDescription": "Natural-language and voice routing to focused Codex skills through an existing authenticated Chrome session. Supports MSP and IT Department accounts, devices, monitoring, patching, software, scripts, remote support, service desk, PSA, OS and application inventory for named or all customers, authorized conditional report delivery, and integrations. Loads one owning specialist, the shared browser contract once, and only needed references.",
     "developerName": "Atera Admin Suite Contributors",
     "category": "Productivity",
     "capabilities": [

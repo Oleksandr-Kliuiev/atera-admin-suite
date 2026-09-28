@@ -1,6 +1,6 @@
 ---
 name: atera-reporting-audit
-description: "Atera reports and audit: device/OS/software inventory, operational evidence, Recent Processes, Audit Log, export, and authorized email delivery. Read-only endpoints."
+description: "Atera reports in Chrome: find any OS or installed program for one/all customers; inventory, audit evidence, export and authorized email. Read-only endpoints."
 ---
 
 # Atera Reporting and Audit
@@ -8,7 +8,10 @@ description: "Atera reports and audit: device/OS/software inventory, operational
 Use the existing authenticated **Chrome** session and read the [shared browser contract](../atera-organization-lifecycle/references/browser-operation-contract.md) once per working context.
 
 Choose only the needed route; do not load every recipe:
-- Device/OS or installed-program inventory: read [inventory scope](references/inventory-email.md#common-scope), then [Windows 10](references/windows-inventory.md) or [installed programs](references/software-inventory.md) when applicable.
+- “Still running [OS/program]?”, including Norwegian “fortsatt”, “kjører”, “nokon”: read [inventory scope](references/inventory-email.md#common-scope) and **one** recipe below. Start in Reports even without the word “report”; inventory does not mean deployment.
+  - Windows desktop/server family: **Monitoring → Microsoft licensing**; [Windows](references/windows-inventory.md).
+  - macOS, Linux, other OS, or Windows family absent from that selector: **Analytical reports → Presets → OS Overview**; [OS overview](references/os-overview.md).
+  - Installed application, optionally version/publisher: **Monitoring → Software inventory**; [programs](references/software-inventory.md). OS names belong to OS reports, not Software Name.
 - Other reports, Recent Processes, Audit Log, or discrepancies: read the relevant sections of [reporting evidence](references/reporting-audit.md).
 - Sending any report: additionally read [delivery](references/report-delivery.md); inventory/audit recipes need not be reread. Prepare while resolving a missing recipient.
 

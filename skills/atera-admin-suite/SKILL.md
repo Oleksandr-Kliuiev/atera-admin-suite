@@ -25,3 +25,4 @@ Select one owner and execute; no skill name is required from the user. Read its 
 | Reusable account profiles, discovery/comparison/validation | [Operations catalog](../atera-operations-catalog/SKILL.md) |
 
 Inventory requests belong to Reporting; they do not authorize deployment or remediation.
+“Does this customer / anyone still run [OS or program]?” routes to Reporting in Reports, even without the word “report.” Classify OS versus application and named-customer versus all-customer scope; do not inherit a previous customer's filter for “anyone.”

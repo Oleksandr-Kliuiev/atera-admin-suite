@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.2 — 2026-09-28
+
+- Route Windows family inventory to Monitoring → Microsoft licensing, applications to Monitoring → Software inventory, and other operating systems to Analytical reports → Presets → OS Overview with complete device drilldown and customer evidence.
+- Reset residual customer, software, version, and OS filters for each request; support named-customer and all-customer “nokon” scope, exact OS selectors, and deduplicated devices across application versions.
+- Preserve conditional one-time sends, distinguish verified zero from loading, partial, or stale results, disclose unknown freshness, resolve displayed-email/link conflicts, omit unrequested license keys, and keep endpoint evidence gathering read-only.
+- Add synthetic English and Norwegian routing and safety scenarios for OS and application inventory and conditional delivery.
+
 ## 0.1.1 — 2026-09-28
 
 - Route natural-language and voice requests to one owning specialist using the existing authenticated Chrome session; read the shared contract once and only the needed references.

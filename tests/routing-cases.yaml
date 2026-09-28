@@ -15,14 +15,100 @@ cases:
     expected_owner: atera-service-desk
   - request: "Export an Atera software inventory report"
     expected_owner: atera-reporting-audit
+    expected_route: classic_operational_reports_monitoring_software_inventory
   - request: "In Atera, email the selected customer's Windows 10 device list to admin@example.com"
     input_mode: voice
     expected_owner: atera-reporting-audit
     expected_requires_skill_name: false
     expected_endpoint_access: read_only
+    expected_start_area: Reports
+    expected_route: classic_operational_reports_monitoring_microsoft_licensing
+    expected_os_filter: Windows 10
+    expected_editions: [Windows 10 Pro, Windows 10 IoT Enterprise LTSC]
     expected_delivery: one_authorized_send
     expected_contract_loads_per_context: 1
     expected_references:
       - inventory-email.md#common-scope
       - windows-inventory.md
       - report-delivery.md
+  - request: "Kan du i Atera sjekke om kunden Eksempelkunde fortsatt har PC-er som kjører Windows 10? Send i tilfelle listen på e-post til admin@example.com."
+    input_mode: voice
+    expected_owner: atera-reporting-audit
+    expected_requires_skill_name: false
+    expected_endpoint_access: read_only
+    expected_start_area: Reports
+    expected_route: classic_operational_reports_monitoring_microsoft_licensing
+    expected_customer_scope: Eksempelkunde
+    expected_os_filter: Windows 10
+    expected_editions: [Windows 10 Pro, Windows 10 IoT Enterprise LTSC]
+    expected_delivery: one_authorized_send_only_if_qualifying_matches
+    prohibited_routes: [devices_filters, software_name_windows_10]
+  - request: "Kan du i Atera sjekke om nokon framleis har PC-ar med Windows 10? Send i så fall lista til admin@example.com."
+    input_mode: voice
+    previous_customer_scope: Eksempelkunde
+    expected_owner: atera-reporting-audit
+    expected_customer_scope: all_customers
+    expected_clear_filters: [customer, software, version, os]
+    expected_route: classic_operational_reports_monitoring_microsoft_licensing
+    expected_os_filter: Windows 10
+    expected_delivery: one_authorized_send_only_if_qualifying_matches
+    prohibited_assumption: reuse_previous_customer_scope
+  - request: "List Windows 11 computers for Example Services in Atera."
+    expected_owner: atera-reporting-audit
+    expected_customer_scope: Example Services
+    expected_clear_filters: [customer, software, version, os]
+    expected_route: classic_operational_reports_monitoring_microsoft_licensing
+    expected_os_filter: exact_available_Windows_11_selector
+    expected_editions: all_matching_requested_family
+    expected_delivery: none
+  - request: "Does Eksempelkunde have Ubuntu 22.04 devices in Atera? Email any matches to admin@example.com."
+    expected_owner: atera-reporting-audit
+    expected_customer_scope: Eksempelkunde
+    expected_clear_filters: [customer, software, version, os]
+    expected_route: analytical_reports_presets_os_overview
+    expected_os_match: Ubuntu 22.04
+    expected_coverage: complete_drilldown_with_customer_evidence
+    expected_endpoint_access: read_only
+    expected_delivery: one_authorized_send_only_if_qualifying_matches
+    expected_references: [inventory-email.md#common-scope, os-overview.md, report-delivery.md]
+    prohibited_evidence: windows_11_readiness_subset
+  - request: "Har nokon macOS-maskiner i Atera?"
+    expected_owner: atera-reporting-audit
+    expected_customer_scope: all_customers
+    expected_clear_filters: [customer, software, version, os]
+    expected_route: analytical_reports_presets_os_overview
+    expected_os_match: macOS_family
+    expected_coverage: complete_drilldown_with_customer_evidence
+    expected_delivery: none
+  - request: "Check which computers at Example Services have 7-Zip in Atera. Send the list to admin@example.com if any do."
+    expected_owner: atera-reporting-audit
+    expected_customer_scope: Example Services
+    expected_clear_filters: [customer, software, version, os]
+    expected_route: classic_operational_reports_monitoring_software_inventory
+    expected_application_match: 7-Zip
+    expected_versions: all_versions_of_requested_application
+    expected_device_count: deduplicated_across_matching_versions
+    expected_endpoint_access: read_only
+    expected_delivery: one_authorized_send_only_if_qualifying_matches
+    expected_references: [inventory-email.md#common-scope, software-inventory.md, report-delivery.md]
+  - request: "Kan du i Atera sjekke om nokon har Google Chrome installert? Send lista til admin@example.com dersom du finn nokon."
+    input_mode: voice
+    previous_customer_scope: Eksempelkunde
+    previous_filters: {os: Windows 10, software: 7-Zip, version: "24.09"}
+    expected_owner: atera-reporting-audit
+    expected_customer_scope: all_customers
+    expected_clear_filters: [customer, software, version, os]
+    expected_route: classic_operational_reports_monitoring_software_inventory
+    expected_application_match: Google Chrome
+    expected_versions: all_versions_of_requested_application
+    expected_device_count: deduplicated_across_matching_versions
+    expected_delivery: one_authorized_send_only_if_qualifying_matches
+    prohibited_assumption: reuse_previous_customer_scope
+  - request: "List devices with 7-Zip version 24.09 for Eksempelkunde in Atera."
+    expected_owner: atera-reporting-audit
+    expected_customer_scope: Eksempelkunde
+    expected_clear_filters: [customer, software, version, os]
+    expected_route: classic_operational_reports_monitoring_software_inventory
+    expected_application_match: 7-Zip
+    expected_version_match: "24.09"
+    expected_delivery: none

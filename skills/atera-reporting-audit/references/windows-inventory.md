@@ -1,14 +1,22 @@
-# Windows 10 device list
+# Windows family inventory
 
-On **2026-09-28**, live Chrome navigation confirmed **Devices → Filters → Advanced filters**, with an **OS edition** criterion, operator, value, and Apply control. Filtering/results/export remain untested here; confirm available operators and labels live. Apply the inventory scope already loaded by the entrypoint.
+For a Windows desktop/server OS question, start in **Reports → Classic Reports / Operational reports → Monitoring → Microsoft licensing**. Apply the entrypoint's inventory scope to one or all customers. On **2026-09-28**, Chrome showed Windows desktop and Server family options; Windows 10 generation and device results were verified. Choose the requested available family, not this example by default.
 
-1. Open **Devices → Filters**. Apply the Customer/Site scope and only requested folder/status restrictions. Clear conflicting saved filters, retaining the requested scope.
-2. Open **Advanced filters → Operating system → OS edition**. Use the live supported operator/value that matches Windows 10 editions. If it is a text match, match the Windows 10 product name; if enumeration, include all relevant Windows 10 editions. Validate returned product labels. Do not identify Windows 10 from the kernel/build prefix `10.*`, which also appears on other Windows products.
-3. Apply, observe the updated count and a sample of OS product names, and include the **OS edition** column. Include device name, Customer/Site, stable ID if offered, and last-seen/status fields as available. **OS version** may mean release/build on Devices; do not assume fields have identical semantics across reports.
-4. Export the filtered Devices view using the observed download control (documented Excel export). Verify the export carries the scope and Windows 10 criterion; apply the common completeness check.
+## Report path
 
-Sources: [Devices advanced filters](https://support.atera.com/hc/en-us/articles/115012115908-Devices-page-advanced-filters), [Devices page, columns and export](https://support.atera.com/hc/en-us/articles/9903603088284-The-Devices-page).
+1. Reuse an already open matching report; otherwise open **Reports → Monitoring → Microsoft licensing**. A report may render in an embedded legacy frame; inspect that visible frame. Use current labels/links, not saved element IDs or guessed routes.
+2. Set **Customer Name(s)** to the exact customer/site or explicitly **All** for global scope. Keep **Agent Name(s) = All** and **Office Edition(s) = All** unless narrowed. Verify selected labels after menus close.
+3. Clear previous **Operating System(s)** selections, then select the requested family (e.g. Windows 10, Windows 11, Windows Server 2019). Include its editions, such as Pro and IoT Enterprise LTSC, unless restricted. If an edition/build/version was requested, refine the generated rows accordingly. Do not substitute a different available OS for an absent option: use [OS overview](os-overview.md). This is an OS-family selector, not Software Name; update packages and kernel/build prefix `10.*` do not identify Windows 10 (Windows 11/server also use it).
+4. Select **Generate** once and wait for results. Verify customer/all scope, OS filter, **Stations** count, distribution and device rows. Reconcile unique devices against Stations before any additional edition/version restriction, then give the qualifying count. Include customer, device, OS edition/version and stable ID/freshness only if exposed. Cover all rows before calling the list complete.
+5. Report **Atera-reported inventory**. Generation time is not endpoint scan time; missing freshness does not establish which machines are currently online or recently checked. A positive report proves inventory matches, not live endpoint verification. Zero is usable only after correct report, complete scope and successful generation are established; an empty/loading grid or unsuccessful Devices search is not evidence of absence.
+6. For “if any / i tilfelle / i så fall”, prepare delivery only when qualifying matches exist; a verified zero means report zero and do not send. If coverage/freshness is uncertain, disclose it rather than claiming no matching PCs. Follow [delivery](report-delivery.md) when sending is requested.
 
-Fallback only if the primary route is unavailable: **Reports → Analytical reports → Presets → OS overview**, if licensed and permitted. Apply scope, then drill into the agent count for the Windows 10 product row. This route is documented but report access varies. Preset reports may be limited to 500 rows: reconcile coverage and partition scope if necessary; never call a clipped report complete. Do not purchase analytics or clone/build a custom report merely to bypass a missing primary control without authorization.
+## Minimal disclosure and alternatives
 
-Sources: [OS overview](https://support.atera.com/hc/en-us/articles/17885207693596-Analytical-reports-OS-overview), [Analytical reports](https://support.atera.com/hc/en-us/articles/5666497171612-Atera-s-analytical-reports).
+Microsoft licensing also contains Windows/Office product keys. An OS inventory request does not need them. Send only the verified customer/device/OS list and relevant limitations; a short list in the email body is sufficient unless a file was requested. For a file, use supported column selection or build a minimal export from complete verified rows. Do not attach a raw licensing report containing unrequested keys.
+
+If this report/OS option is unavailable, use [OS overview](os-overview.md) when licensed/permitted; preserve the requested scope and establish complete detail before conclusions.
+
+Use Devices only for a user-requested device-view workflow or an explicitly accepted fallback. Do not return to it for this report-first request. Software Inventory answers installed-application questions; a Windows update package is not operating-system evidence.
+
+Sources: [Microsoft licensing report and filters](https://support.atera.com/hc/en-us/articles/115003072068-Operational-report-Microsoft-licensing), [OS overview](https://support.atera.com/hc/en-us/articles/17885207693596-Analytical-reports-OS-overview).

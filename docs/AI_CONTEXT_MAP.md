@@ -18,10 +18,14 @@ Use this map to load the smallest sufficient context.
 | Tickets, SLA, rules, templates, queues | `skills/atera-service-desk/SKILL.md` | Service desk reference |
 | Contracts, time, rates, billing | `skills/atera-psa-billing/SKILL.md` | PSA/billing reference |
 | Reports, Recent Processes, and audit evidence | `skills/atera-reporting-audit/SKILL.md` | Relevant sections of `references/reporting-audit.md` |
-| Device/OS or installed-program inventory | `skills/atera-reporting-audit/SKILL.md` | `references/inventory-email.md#common-scope`, then only the applicable Windows or software recipe |
-| Requested report email delivery | `skills/atera-reporting-audit/SKILL.md` | `references/report-delivery.md`; reuse prepared report evidence |
+| Windows family inventory, named or all customers | `skills/atera-reporting-audit/SKILL.md` | `references/inventory-email.md#common-scope`, then `references/windows-inventory.md`; Reports → Monitoring → Microsoft licensing |
+| Installed-application inventory, including all matching versions | `skills/atera-reporting-audit/SKILL.md` | `references/inventory-email.md#common-scope`, then `references/software-inventory.md`; Reports → Monitoring → Software inventory |
+| Other OS inventory with complete device detail | `skills/atera-reporting-audit/SKILL.md` | `references/inventory-email.md#common-scope`, then `references/os-overview.md`; Reports → Analytical reports → Presets → OS Overview |
+| Requested report email delivery | `skills/atera-reporting-audit/SKILL.md` | `references/report-delivery.md`; preserve send conditions, resolve address/link conflicts, omit unrequested license keys |
 | API and integrations | `skills/atera-integrations-api/SKILL.md` | Integration/API reference |
 | Account profile discovery/catalog | `skills/atera-operations-catalog/SKILL.md` | Schema, example, validator |
 | Package validation | `scripts/check_package.py` | Run `python3 scripts/check_package.py`; review relevant `tests/` scenarios |
 
 Reference paths above are relative to the selected skill. Do not load the complete `skills/` tree for a domain task. Route by frontmatter, read the selected entrypoint and shared Chrome contract once, then load only required reference sections. Add another specialist only when its critical action or detailed procedure is needed. Report delivery preserves exact user authorization and requires an observed outcome.
+
+Every new inventory request resets residual customer, software, version, and OS filters. Unnamed “anyone” / “nokon” scope covers all customers. Verify complete scope before claiming zero, deduplicate application devices across versions, and keep evidence gathering read-only. Conditional delivery sends once only when qualifying matches exist.
