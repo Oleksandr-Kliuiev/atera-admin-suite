@@ -2,6 +2,8 @@
 
 ## 0.1.2 — 2026-09-28
 
+- Send reports through Outlook on the web in Chrome on Windows/macOS, using each employee’s verified mailbox and runtime attachment paths.
+
 - Route Windows family inventory to Monitoring → Microsoft licensing, applications to Monitoring → Software inventory, and other operating systems to Analytical reports → Presets → OS Overview with complete device drilldown and customer evidence.
 - Reset residual customer, software, version, and OS filters for each request; support named-customer and all-customer “nokon” scope, exact OS selectors, and deduplicated devices across application versions.
 - Preserve conditional one-time sends, distinguish verified zero from loading, partial, or stale results, disclose unknown freshness, resolve displayed-email/link conflicts, omit unrequested license keys, and keep endpoint evidence gathering read-only.

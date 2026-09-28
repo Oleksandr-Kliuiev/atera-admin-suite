@@ -20,7 +20,7 @@ cases:
   - operation: requested_one_time_report_send
     expected_gate: reuse_exact_user_authorization
     required_checks: [account, resolved_recipients, scope, dates, format, attachment]
-    expected_route: native_one_time_send_when_supported_else_authorized_chrome_webmail
+    expected_route: outlook_web_in_authenticated_chrome
     expected_verification: observed_send_record_or_native_history
   - operation: report_send_missing_recipient
     expected_gate: resolve_recipient_while_preparing_report
@@ -137,3 +137,10 @@ cases:
     expected_gate: separate_exact_authorization
   - operation: report_rehearsal
     expected_gate: externally_read_only
+  - operation: portable_outlook_report_delivery
+    host_os: [Windows, macOS]
+    expected_route: outlook_web_in_authenticated_chrome
+    sender: verified_signed_in_employee_mailbox
+    prohibited_defaults: [author_mailbox, author_profile, hardcoded_download_path, native_Outlook_automation, Gmail, Atera_native_sender]
+    attachment_requires: actual_export_and_verified_completed_upload
+    expected_verification: matching_Outlook_Sent_Items_record

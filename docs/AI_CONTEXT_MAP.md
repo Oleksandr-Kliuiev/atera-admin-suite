@@ -21,7 +21,7 @@ Use this map to load the smallest sufficient context.
 | Windows family inventory, named or all customers | `skills/atera-reporting-audit/SKILL.md` | `references/inventory-email.md#common-scope`, then `references/windows-inventory.md`; Reports → Monitoring → Microsoft licensing |
 | Installed-application inventory, including all matching versions | `skills/atera-reporting-audit/SKILL.md` | `references/inventory-email.md#common-scope`, then `references/software-inventory.md`; Reports → Monitoring → Software inventory |
 | Other OS inventory with complete device detail | `skills/atera-reporting-audit/SKILL.md` | `references/inventory-email.md#common-scope`, then `references/os-overview.md`; Reports → Analytical reports → Presets → OS Overview |
-| Requested report email delivery | `skills/atera-reporting-audit/SKILL.md` | `references/report-delivery.md`; preserve send conditions, resolve address/link conflicts, omit unrequested license keys |
+| Requested report email delivery | `skills/atera-reporting-audit/SKILL.md` | `references/report-delivery.md`; Outlook web in Chrome on Windows/macOS; preserve send conditions and per-user mailbox identity |
 | API and integrations | `skills/atera-integrations-api/SKILL.md` | Integration/API reference |
 | Account profile discovery/catalog | `skills/atera-operations-catalog/SKILL.md` | Schema, example, validator |
 | Package validation | `scripts/check_package.py` | Run `python3 scripts/check_package.py`; review relevant `tests/` scenarios |

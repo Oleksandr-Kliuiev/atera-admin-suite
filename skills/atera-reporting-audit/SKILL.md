@@ -13,7 +13,7 @@ Choose only the needed route; do not load every recipe:
   - macOS, Linux, other OS, or Windows family absent from that selector: **Analytical reports → Presets → OS Overview**; [OS overview](references/os-overview.md).
   - Installed application, optionally version/publisher: **Monitoring → Software inventory**; [programs](references/software-inventory.md). OS names belong to OS reports, not Software Name.
 - Other reports, Recent Processes, Audit Log, or discrepancies: read the relevant sections of [reporting evidence](references/reporting-audit.md).
-- Sending any report: additionally read [delivery](references/report-delivery.md); inventory/audit recipes need not be reread. Prepare while resolving a missing recipient.
+- Sending any report: additionally read [Outlook web delivery](references/report-delivery.md), portable across Windows/macOS in Chrome; inventory/audit recipes need not be reread. Prepare while resolving a missing recipient.
 
 Keep endpoint evidence gathering read-only. Inventory uninstall controls, scripts, endpoint refreshes, patches, and new recurring schedules are outside a one-time report request. Minimize exports and keep them private, outside public repositories and operations catalogs.
 

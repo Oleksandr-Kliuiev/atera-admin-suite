@@ -16,7 +16,7 @@ Load this contract once plus the selected recipe/section, including its required
 
 Resolve scope and actual recipients without guessing; “this customer” can use the selected organization, “me” requires a verified address. Prepare while resolving missing details. Reuse exact typed/spoken authorization. A correction updates the task record and cancels any incompatible pending commit; recheck before proceeding.
 
-Requested report delivery authorizes sending once to resolved recipients. Verify account, recipient, scope, dates, format, and attachment. Read-only/rehearsal requests stay externally read-only. Additional recipients, recurrence, paid features, and endpoint changes need their own authorization.
+Requested report delivery uses Outlook on the web in Chrome on Windows/macOS and authorizes one send from the verified signed-in employee's mailbox to resolved recipients. Verify account, scope, dates, format, and any attachment; load the reporting delivery recipe for details. Read-only/rehearsal requests stay externally read-only. Additional recipients, recurrence, paid features, and endpoint changes need their own authorization.
 
 Retain specialist critical checkpoints for privileged access, broad assignments, endpoint execution, remote sessions, destructive actions, key resets, and billing finalization. Summarize applicable targets/count, online state, schedule/timezone, queue expiry, impact, exclusions, and rollback; obtain only missing exact authorization.
 
