@@ -2,9 +2,15 @@
 
 Use this for any named installed application, not OS detection. A Software Name search for “Windows 10” can find update packages on another OS. Apply the entrypoint's inventory scope.
 
-On **2026-09-28**, live Chrome confirmed **Reports → Classic Reports / Operational reports → Monitoring → Software inventory**, generation for a named application/customer, and per-version device detail. Export/email were not exercised. The report may appear inside an embedded legacy view; inspect its visible content.
+On **2026-09-29**, live Chrome confirmed **Reports → Analytical reports → Presets → Software inventory**. Its table presents Agent name, Customer name, Software name and Software version in each installation row. Prefer this direct device list for a named-program question.
 
-1. Open that report and set the current request's form values:
+1. Clear previous customer, agent, software and version filters. Set the current request's scope; “anyone / nokon” covers all accessible customers. Select every matching product name/version in **Software Name**, unless the user requested one version, then press **Update**. Verify that the table itself refreshed.
+2. Read every resulting row or use a verified filtered export. Include device, customer, product and version in the answer or requested email. Deduplicate installations by stable device identity when exposed. A row count is not automatically a unique-device count. Never stop at a version summary or one example.
+3. Check device status before calling an analytical result currently managed. In the observed 7-Zip case, the analytical view showed 16 installation rows while the classic report with **Exclude retired devices** showed 15 devices; the analytical view also included `MOTE-KO-INTELI7`. This illustrates a possible scope difference, not a count to reuse in future requests.
+
+Use the classic route below when the analytical view is unavailable or when **Exclude retired devices** or per-device **Last checked** is needed. The classic report may appear inside an embedded legacy view; inspect its visible content.
+
+1. Open **Reports → Classic Reports / Operational reports → Monitoring → Software inventory** and set the current request's form values:
 
    | Control | Value |
    |---|---|

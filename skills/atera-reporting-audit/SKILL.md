@@ -11,7 +11,7 @@ Choose only the needed route; do not load every recipe:
 - “Still running [OS/program]?”, including Norwegian “fortsatt”, “kjører”, “nokon”: read [inventory scope](references/inventory-email.md#common-scope) and **one** recipe below. Start in Reports even without the word “report”; inventory does not mean deployment.
   - Windows desktop/server family: **Monitoring → Microsoft licensing**; [Windows](references/windows-inventory.md).
   - macOS, Linux, other OS, or Windows family absent from that selector: **Analytical reports → Presets → OS Overview**; [OS overview](references/os-overview.md).
-  - Installed application, optionally version/publisher: **Monitoring → Software inventory**; [programs](references/software-inventory.md). OS names belong to OS reports, not Software Name.
+  - Installed application, optionally version/publisher: **Analytical reports → Presets → Software inventory** for a direct device list; [programs](references/software-inventory.md). OS names belong to OS reports, not Software Name.
 - Other reports, Recent Processes, Audit Log, or discrepancies: read the relevant sections of [reporting evidence](references/reporting-audit.md).
 - Sending any report: additionally read [Outlook web delivery](references/report-delivery.md), portable across Windows/macOS in Chrome; inventory/audit recipes need not be reread. Prepare while resolving a missing recipient.
 

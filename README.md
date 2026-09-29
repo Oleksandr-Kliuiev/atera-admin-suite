@@ -33,7 +33,7 @@ You can also name `$atera-admin-suite` explicitly. The suite selects one owning 
 Inventory requests route by what is being counted:
 
 - Windows families use **Reports → Classic Reports / Operational reports → Monitoring → Microsoft licensing**, with the exact available OS selector for the requested family and all matching editions.
-- Installed applications use **Reports → Classic Reports / Operational reports → Monitoring → Software inventory**, with all matching versions unless a version is requested. Device lists are deduplicated across matching versions.
+- Installed applications use **Reports → Analytical reports → Presets → Software inventory** for a direct device-level list, with all matching software names and versions unless narrowed. The classic Operational report remains useful for its retired-device filter and last-checked detail. Reconcile counts before claiming a unique or current-device total.
 - Other operating systems use **Reports → Analytical reports → Presets → OS Overview**, with complete device drilldown and customer evidence. Windows 11 readiness results do not establish complete OS inventory.
 
 Each new request clears residual customer, software, version, and OS filters before applying the requested scope. A named customer limits the report to that customer; a general “anyone” / Norwegian “nokon” request without a customer uses all customers, including after a previous named-customer report. Results are Atera-reported inventory; report generation time does not establish endpoint freshness. A verified complete zero requires a successfully generated result covering the requested scope. Empty, loading, partial, or stale results do not establish zero.

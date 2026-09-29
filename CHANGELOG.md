@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased — 2026-09-29
+
+- Prefer Analytical reports → Presets → Software inventory for a direct device-level application list. Refresh all matching names and versions, report every device, and reconcile installation counts with unique or active devices.
+- Keep the classic Operational software report for retired-device filtering and Last checked evidence.
+
 ## 0.1.2 — 2026-09-28
 
 - Send reports through Outlook on the web in Chrome on Windows/macOS, using each employee’s verified mailbox and runtime attachment paths.

@@ -15,7 +15,8 @@ cases:
     expected_owner: atera-service-desk
   - request: "Export an Atera software inventory report"
     expected_owner: atera-reporting-audit
-    expected_route: classic_operational_reports_monitoring_software_inventory
+    expected_route: analytical_reports_presets_software_inventory
+    expected_result: complete_device_level_list
   - request: "In Atera, email the selected customer's Windows 10 device list to admin@example.com"
     input_mode: voice
     expected_owner: atera-reporting-audit
@@ -84,7 +85,8 @@ cases:
     expected_owner: atera-reporting-audit
     expected_customer_scope: Example Services
     expected_clear_filters: [customer, software, version, os]
-    expected_route: classic_operational_reports_monitoring_software_inventory
+    expected_route: analytical_reports_presets_software_inventory
+    expected_result: complete_device_level_list
     expected_application_match: 7-Zip
     expected_versions: all_versions_of_requested_application
     expected_device_count: deduplicated_across_matching_versions
@@ -98,7 +100,8 @@ cases:
     expected_owner: atera-reporting-audit
     expected_customer_scope: all_customers
     expected_clear_filters: [customer, software, version, os]
-    expected_route: classic_operational_reports_monitoring_software_inventory
+    expected_route: analytical_reports_presets_software_inventory
+    expected_result: complete_device_level_list
     expected_application_match: Google Chrome
     expected_versions: all_versions_of_requested_application
     expected_device_count: deduplicated_across_matching_versions
@@ -108,7 +111,8 @@ cases:
     expected_owner: atera-reporting-audit
     expected_customer_scope: Eksempelkunde
     expected_clear_filters: [customer, software, version, os]
-    expected_route: classic_operational_reports_monitoring_software_inventory
+    expected_route: analytical_reports_presets_software_inventory
+    expected_result: complete_device_level_list
     expected_application_match: 7-Zip
     expected_version_match: "24.09"
     expected_delivery: none

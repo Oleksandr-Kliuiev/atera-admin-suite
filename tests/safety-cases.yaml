@@ -95,6 +95,10 @@ cases:
     expected_device_count: unique_verified_devices
     expected_content: preserve_matching_version_details_per_device
     prohibited_claim: installation_rows_equal_device_count
+  - operation: analytical_software_inventory_scope_difference
+    evidence: analytical_view_has_16_installation_rows_and_classic_excluding_retired_has_15_devices
+    expected_action: reconcile_scope_and_device_status_before_current_device_claim
+    prohibited_claim: analytical_installation_count_equals_active_device_count
   - operation: application_inventory_pc_only
     request: "Har kunden Eksempelkunde pc som kjører 7-Zip?"
     expected_agent_type: Desktop
