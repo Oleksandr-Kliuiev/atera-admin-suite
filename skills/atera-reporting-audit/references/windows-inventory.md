@@ -1,6 +1,8 @@
 # Windows family inventory
 
-For a Windows desktop/server OS question, start in **Reports → Classic Reports / Operational reports → Monitoring → Microsoft licensing**. Apply the entrypoint's inventory scope to one or all customers. On **2026-09-28**, Chrome showed Windows desktop and Server family options; Windows 10 generation and device results were verified. Choose the requested available family, not this example by default.
+For “does a named customer still have Windows 10 PCs?” start in **Reports → Classic Reports / Operational reports → Monitoring → Auditor**. On **2026-09-29**, a fresh customer-scoped report with **Exclude retired devices** checked verified that the report exposes workstations, OS editions, and Last seen for each device. The report offered a customer selector, **Generate** and **Export**. Do not take one matching device page as the complete answer; use the report's current results on each run.
+
+For broader Windows desktop/server family, edition or licensing questions, use **Reports → Classic Reports / Operational reports → Monitoring → Microsoft licensing** as below. On **2026-09-28**, Chrome showed Windows desktop and Server family options; Windows 10 generation and device results were verified. Choose the requested available family, not this example by default.
 
 ## Report path
 
@@ -17,6 +19,6 @@ Microsoft licensing also contains Windows/Office product keys. An OS inventory r
 
 If this report/OS option is unavailable, use [OS overview](os-overview.md) when licensed/permitted; preserve the requested scope and establish complete detail before conclusions.
 
-Use Devices only for a user-requested device-view workflow or an explicitly accepted fallback. Do not return to it for this report-first request. Software Inventory answers installed-application questions; a Windows update package is not operating-system evidence.
+Use Devices only for a user-requested device-view workflow or an explicitly accepted fallback. Do not return to it for this report-first request. Software Inventory answers installed-application questions; a Windows update package is not operating-system evidence. If Auditor lacks complete OS/device detail in the current UI, use Microsoft licensing or OS Overview and verify the same customer, workstation and retired-device scope before claiming a count.
 
 Sources: [Microsoft licensing report and filters](https://support.atera.com/hc/en-us/articles/115003072068-Operational-report-Microsoft-licensing), [OS overview](https://support.atera.com/hc/en-us/articles/17885207693596-Analytical-reports-OS-overview).

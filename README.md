@@ -32,7 +32,7 @@ You can also name `$atera-admin-suite` explicitly. The suite selects one owning 
 
 Inventory requests route by what is being counted:
 
-- Windows families use **Reports → Classic Reports / Operational reports → Monitoring → Microsoft licensing**, with the exact available OS selector for the requested family and all matching editions.
+- Current Windows 10 PCs for a named customer use **Reports → Classic Reports / Operational reports → Monitoring → Auditor**, with the exact customer and **Exclude retired devices**. Broader Windows edition/licensing questions use **Monitoring → Microsoft licensing** with the requested OS family and all matching editions.
 - Installed applications use **Reports → Analytical reports → Presets → Software inventory** for a direct device-level list, with all matching software names and versions unless narrowed. The classic Operational report remains useful for its retired-device filter and last-checked detail. Reconcile counts before claiming a unique or current-device total.
 - Other operating systems use **Reports → Analytical reports → Presets → OS Overview**, with complete device drilldown and customer evidence. Windows 11 readiness results do not establish complete OS inventory.
 

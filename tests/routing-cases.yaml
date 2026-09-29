@@ -38,12 +38,23 @@ cases:
     expected_requires_skill_name: false
     expected_endpoint_access: read_only
     expected_start_area: Reports
-    expected_route: classic_operational_reports_monitoring_microsoft_licensing
+    expected_route: classic_operational_reports_monitoring_auditor
+    expected_retired_scope: excluded
+    expected_result: complete_windows_10_workstation_list
     expected_customer_scope: Eksempelkunde
     expected_os_filter: Windows 10
     expected_editions: [Windows 10 Pro, Windows 10 IoT Enterprise LTSC]
     expected_delivery: one_authorized_send_only_if_qualifying_matches
     prohibited_routes: [devices_filters, software_name_windows_10]
+  - request: "Kan du også i Atera sjekke om kunden Eksempelkunde fortsatt har pc som kjører windows 10? Send i tilfelle det på epost [user@example.test](mailto:other@example.test) til meg"
+    expected_owner: atera-reporting-audit
+    expected_route: classic_operational_reports_monitoring_auditor
+    expected_customer_scope: Eksempelkunde
+    expected_device_type: workstation
+    expected_retired_scope: excluded
+    expected_result: complete_windows_10_workstation_list
+    expected_recipient_action: clarify_conflicting_displayed_and_mailto_addresses_before_send
+    expected_independent_work: complete_report_while_recipient_unresolved
   - request: "Kan du i Atera sjekke om nokon framleis har PC-ar med Windows 10? Send i så fall lista til admin@example.com."
     input_mode: voice
     previous_customer_scope: Eksempelkunde

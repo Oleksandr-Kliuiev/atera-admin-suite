@@ -95,6 +95,11 @@ cases:
     expected_device_count: unique_verified_devices
     expected_content: preserve_matching_version_details_per_device
     prohibited_claim: installation_rows_equal_device_count
+  - operation: installed_application_request_requires_device_list
+    request: "Kan du Atera sjekke om det fortsatt er nokon som kjører program 7zip"
+    expected_route: analytical_reports_presets_software_inventory
+    expected_result: all_matching_device_customer_version_rows
+    prohibited_answer: aggregate_count_and_one_example_device
   - operation: analytical_software_inventory_scope_difference
     evidence: analytical_view_has_16_installation_rows_and_classic_excluding_retired_has_15_devices
     expected_action: reconcile_scope_and_device_status_before_current_device_claim

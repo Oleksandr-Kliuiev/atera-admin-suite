@@ -4,6 +4,7 @@
 
 - Prefer Analytical reports → Presets → Software inventory for a direct device-level application list. Refresh all matching names and versions, report every device, and reconcile installation counts with unique or active devices.
 - Keep the classic Operational software report for retired-device filtering and Last checked evidence.
+- Route named-customer “still has Windows 10 PCs” to Reports → Monitoring → Auditor with retired devices excluded; keep licensing reports for broader OS edition questions. Add seminar wording and recipient-conflict scenarios.
 
 ## 0.1.2 — 2026-09-28
 

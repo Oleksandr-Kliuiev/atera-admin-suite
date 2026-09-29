@@ -18,7 +18,8 @@ Use this map to load the smallest sufficient context.
 | Tickets, SLA, rules, templates, queues | `skills/atera-service-desk/SKILL.md` | Service desk reference |
 | Contracts, time, rates, billing | `skills/atera-psa-billing/SKILL.md` | PSA/billing reference |
 | Reports, Recent Processes, and audit evidence | `skills/atera-reporting-audit/SKILL.md` | Relevant sections of `references/reporting-audit.md` |
-| Windows family inventory, named or all customers | `skills/atera-reporting-audit/SKILL.md` | `references/inventory-email.md#common-scope`, then `references/windows-inventory.md`; Reports → Monitoring → Microsoft licensing |
+| Current Windows 10 PCs for a named customer | `skills/atera-reporting-audit/SKILL.md` | `references/inventory-email.md#common-scope`, then `references/windows-inventory.md`; Reports → Monitoring → Auditor, Exclude retired devices |
+| Broader Windows edition/licensing inventory | `skills/atera-reporting-audit/SKILL.md` | `references/windows-inventory.md`; Reports → Monitoring → Microsoft licensing |
 | Installed-application inventory, including all matching versions | `skills/atera-reporting-audit/SKILL.md` | `references/inventory-email.md#common-scope`, then `references/software-inventory.md`; Reports → Analytical reports → Presets → Software inventory |
 | Other OS inventory with complete device detail | `skills/atera-reporting-audit/SKILL.md` | `references/inventory-email.md#common-scope`, then `references/os-overview.md`; Reports → Analytical reports → Presets → OS Overview |
 | Requested report email delivery | `skills/atera-reporting-audit/SKILL.md` | `references/report-delivery.md`; Outlook web in Chrome on Windows/macOS; preserve send conditions and per-user mailbox identity |
